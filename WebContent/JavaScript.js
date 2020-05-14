@@ -1,29 +1,26 @@
-let nameArray = [];
-let priceArray = [];
+let shoppingList = [];
+let total = 0;
 
-function addToCart(pName, pPrice) {
+function addToCart(itemName, itemPrice) {
 	
-	nameArray.push(pName);
-	priceArray.push(pPrice);
+	let item = {
+			name: itemName,
+			price: itemPrice
+	};
+	
+	shoppingList.push(item);
+	
+	total = (total + item.price);
 	
 }
 
 function printCart() {
-	let i;
-	let total = 0;
-	
-	for (i = 0; i < priceArray.length; i++) {
-		total += priceArray[i];
+	for(let item of shoppingList) {
+		let itemsInList = document.getElementById("listOfItems");
+		let singleItem = document.createElement("p");
+		singleItem.innerHTML = (item.name + " $" + item.price);
+		itemsInList.appendChild(singleItem);
 	}
-	
-	for (let name of nameArray) {
-		
-		let items = document.getElementById("list");
-		let item = document.createElement("p");
-		item.innerHTML = name;
-		items.appendChild(item);
-	}
-	
 	let finalCart = document.getElementById("finalCart");
 	
 	finalCart.innerHTML = "total: " + total;

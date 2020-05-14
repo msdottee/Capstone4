@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Shopping Cart</title>
+</head>
+<body>
+	<table>
+		<tr>
+			<th>Name</th>
+			<th>Description</th>
+			<th>Price</th>
+			<th></th>
+		</tr>
+		<tr>
+			<td>Grannysmith Apple</td>
+			<td>Green, tart and crunchy</td>
+			<td>0.50</td>
+			<td><input type="button" value="add to cart"
+				onclick="addToCart('Grannysmith Apple', .5)" /></td>
+		</tr>
+		<tr>
+			<td>Orange</td>
+			<td>Tangy and juicy</td>
+			<td>1.50</td>
+			<td><input type="button" value="add to cart"
+				onclick="addToCart('Orange', 1.5)" /></td>
+		</tr>
+		<tr>
+			<td>Pear</td>
+			<td>Tangy and green</td>
+			<td>1.00</td>
+			<td><input type="button" value="add to cart"
+				onclick="addToCart('Pear', 1)" /></td>
+		</tr>
+	</table>
+	
+	<input type="button" value="checkout" onclick="printCart()" />
+	
+	<p id="finalCart"></p> 
+	<div id="list">
+	</div>
+
+	<script src="JavaScript.js"></script>
+</body>
+</html>

@@ -23,5 +23,5 @@ function printCart() {
 	}
 	let finalCart = document.getElementById("finalCart");
 	
-	finalCart.innerHTML = "total: " + total;
+	finalCart.innerHTML = "Your total for today is: $" + total;
 }

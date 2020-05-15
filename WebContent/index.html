@@ -3,47 +3,92 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Shopping Cart</title>
+<link href="style.css" rel="stylesheet" />
 </head>
 <body>
-	<table>
-		<tr>
-			<th>Name</th>
-			<th>Description</th>
-			<th>Price</th>
-			<th></th>
-		</tr>
-		<tr>
-			<td>Grannysmith Apple</td>
-			<td>Green, tart and crunchy</td>
-			<td>0.50</td>
-			<td><input type="button" value="add to cart"
-				onclick="addToCart('Grannysmith Apple', .5)" /></td>
-		</tr>
-		<tr>
-			<td>Orange</td>
-			<td>Tangy and juicy</td>
-			<td>1.50</td>
-			<td><input type="button" value="add to cart"
-				onclick="addToCart('Orange', 1.5)" /></td>
-		</tr>
-		<tr>
-			<td>Pear</td>
-			<td>Tangy and green</td>
-			<td>1.00</td>
-			<td><input type="button" value="add to cart"
-				onclick="addToCart('Pear', 1)" /></td>
-		</tr>
+	<h1>Farmers Market</h1>
+
+	<table class="table table-hover" id="list">
+		<thead>
+			<tr>
+				<th scope="col">Name</th>
+				<th scope="col">Description</th>
+				<th scope="col">Price</th>
+				<th scope="col"></th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<th scope="row">Pears 4pk</th>
+				<td>Tangy and green</td>
+				<td>$2.25</td>
+				<td><input type="button" value="add to cart"
+					onclick="addToCart('Pears 3pk', 2.25)" /></td>
+			</tr>
+			<tr>
+				<th scope="row">Oranges 6pk</th>
+				<td>Tangy and juicy</td>
+				<td>$3.50</td>
+				<td><input type="button" value="add to cart"
+					onclick="addToCart('Oranges 6pk', 3.5)" /></td>
+			</tr>
+			<tr>
+				<th scope="row">Grannysmith Apple</th>
+				<td>Green, tart and crunchy</td>
+				<td>$0.50</td>
+				<td><input type="button" value="add to cart"
+					onclick="addToCart('Grannysmith Apple', .5)" /></td>
+			</tr>
+			<tr>
+				<th scope="row">Asiago Bagels 6pk</th>
+				<td>Fresh Baked</td>
+				<td>$5.00</td>
+				<td><input type="button" value="add to cart"
+					onclick="addToCart('Asiago Bagels 6pk', 5)" /></td>
+			</tr>
+			<tr>
+				<th scope="row">Plain Bagels 6pk</th>
+				<td>Fresh Baked</td>
+				<td>$5.00</td>
+				<td><input type="button" value="add to cart"
+					onclick="addToCart('Plain Bagels 6pk', 5)" /></td>
+			</tr>
+			<tr>
+				<th scope="row">Everything Bagels 6pk</th>
+				<td>Fresh Baked</td>
+				<td>$5.00</td>
+				<td><input type="button" value="add to cart"
+					onclick="addToCart('Everything Bagels 6pk', 5)" /></td>
+			</tr>
+			<tr>
+				<th scope="row">Tomatoes 4pk</th>
+				<td>Ripe and juicy</td>
+				<td>$2.50</td>
+				<td><input type="button" value="add to cart"
+					onclick="addToCart('Tomatoes 4pk', 2.50)" /></td>
+			</tr>
+			<tr>
+				<th scope="row">Rainbow Peppers 3pk</th>
+				<td>Colorful</td>
+				<td>$3.75</td>
+				<td><input type="button" value="add to cart"
+					onclick="addToCart('Rainbow Peppers 3pk', 3.75)" /></td>
+			</tr>
+			<tr>
+				<th scope="row">Corn</th>
+				<td>Sold per ear</td>
+				<td>$1.00</td>
+				<td><input type="button" value="add to cart"
+					onclick="addToCart('Corn', 1)" /></td>
+			</tr>
+		</tbody>
 	</table>
-	
-	<input type="button" value="checkout" onclick="printCart()" />
-	
-	<p id="finalCart"></p> 
-	
-	<div id="listOfItems">
+	<div class="center">
+		<input type="button" value="checkout" onclick="printCart()" />
 	</div>
-	
-	<div id="listOfPrices">
-	</div>
+	<p id="finalCart"></p>
+
+	<div id="listOfItems"></div>
 
 	<script src="JavaScript.js"></script>
 </body>
